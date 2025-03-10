@@ -1,6 +1,5 @@
 # Multilingual-Q-A-Bot-for-College-Website-using-BERT
-**
-The proposed system is a multilingual chatbot that leverages a pre-trained BERT model fine-tuned on a labeled dataset in English. The dataset, created using information from the MVSR College website, consists of context, questions, and corresponding answers.
+**The proposed system is a multilingual chatbot that leverages a pre-trained BERT model fine-tuned on a labeled dataset in English. The dataset, created using information from the MVSR College website, consists of context, questions, and corresponding answers.
 
 To enable multilingual support, a translation module is integrated into the system. When a user submits a query in a language other than English, the module translates it into English. This translated query is then processed by the fine-tuned BERT model, which extracts the relevant answer span from the context. The output is subsequently translated back into the user's original language.
 
