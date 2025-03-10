@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Chatbot</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="college-info">
+                <div class="college-header">
+                    <div class="college-logo"><img src="/static/images/mvsr-logo.png"></div>
+                    <div class="college-details">
+                        <p class="college-name">Maturi Venkata Subba Rao (MVSR) Engineering College</p>
+                        <p class="autonomous">(An Autonomous Institution)</p>
+                        <p>(Sponsored by Matrusri Education Society, Estd. 1980)</p>
+                        <p>Affiliated to Osmania University & Approved by AICTE</p>
+                    </div>
+                </div>
+                <div class="about">
+                    <p class="heading">About MVSR Engineering College</p>
+                    <p>Maturi Venkata Subba Rao Engineering College, an AUTONOMOUS institution also known as MVSR Engineering College was established in 1981 with affiliation to Osmania University. Currently, the college has B.E programs in Civil, CSE, ECE, EEE, IT, Mechanical and Automobile Engineering, PG programs in CSE, ECE and Mechanical besides MBA. This college has been recognized by Osmania University as a Centre for pursuing research leading to the award of Ph.D. Degree in the Disciplines of CSE, ECE and Mechanical Engineering. In all about a 1000 students take admission per year. The college is one of the earliest of the private Engineering colleges in the state, and since inception, the college has ensured excellent and exemplary standards, which has helped the college to be one of the topmost andsought after colleges in the state. The college is located in a sprawling campus at Nadergul, just 16 kms from the city centre. The instructional facilities are spacious, and the laboratories are continuously upgraded with state of the art equipment. There are over 200 highly qualified and dedicated faculty. Faculty of various departments handle a number of consultancy assignments from GHMC, defense laboratories etc. The college has been awarded the National Employability Award 2013 by the Aspiring minds, The UG programs in engineering have been accredited by NBA thrice. It is an ISO 9001:2015 certified Institution.About 70% of the students get jobs through campus placements in the top MNC’s like Cognizant, Infosys, Wipro, Capgemini, Deloitte, CSC, Intergraph, etc., and reputed core companies.The College has a sophisticated Digital Library and also has an impressive repository of technical reference books, Magazines, National and International Journals catering to the needs of the students and faculty. Students and staff are provided with very good indoor and outdoor sports facilities. A dispensary is provided on the campus for the benefit of students and staff. Every effort is made to ensure spared that the students are trained in technical skills while inculcating in them a sense of social responsibility, in tune with the vision and mission of the college.</p>
+                </div>
+            </div>
+            <div id="circular-sb" style="display: block;">
+                I'm Online! Need help?
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+            </div>
+            <div class="chatbox">
+                <div class="chatbox__support">
+                    <div class="chatbox__header">
+                        
+                        <div class="chatbox__image--header">
+                            Virtual Assistant
+                        </div>
+                        <div class='c'>
+                            
+                        </div>
+
+                        <div>
+                            <form>  
+                            
+                            <select id="select">  
+                            <option value = "English"> English    
+                            </option>  
+                            <option value = "Hindi"> Hindi   
+                            </option>  
+                            <option value = "Telugu"> Telugu  
+                            </option>  
+                            
+                            </select>  
+                            </form> 
+                        </div>
+                    
+                        <div class="chatbox__content--header">
+                            <h4 class="chatbox__heading--header"></h4>
+                            <p class="chatbox__description--header"></p>
+                        </div>
+
+                        <button class="menuButton" onclick="showMenu()">Menu</button>
+                    </div>
+                    <div class="chatbox__messages">
+                        <div></div>
+                    </div>
+                    <div id="loader" style="display: none;"></div>
+                    <div class="chatbox__footer">
+                        <input type="text" placeholder="Write a message...">
+                        <button class="chatbox__send--footer send__button">Send</button>
+                    </div>
+                </div>
+                <div class="chatbox__button">
+                    <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- <script>
+            $SCRIPT_ROOT = { {request.script_root|tojson} };
+        </script> -->
+        <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+    </body>
+</html>

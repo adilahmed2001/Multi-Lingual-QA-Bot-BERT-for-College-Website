@@ -1,0 +1,311 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+    background: #F1F1F1;
+}
+
+*, html {
+    --primaryGradient: linear-gradient(93.12deg, #581B98 0.52%, #9C1DE7 100%);
+    --secondaryGradient: linear-gradient(268.91deg, #581B98 -2.14%, #9C1DE7 99.69%);
+    --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+    --primary: #581B98;
+}
+
+/* COLLEGE DETAILS */
+.college-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.college-header {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0;
+}
+
+.college-logo img {
+    width: 215px;
+    height: 200px;
+}
+
+.college-details {
+    text-align: center;
+    padding: 2.5rem 4rem;
+}
+
+.college-details p {
+    padding: 3px;
+}
+
+.college-name {
+    color: darkblue;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.autonomous {
+    color: darkred;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.about {
+    padding: 1rem 12rem;
+}
+
+.about .heading {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    color: darkblue;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.about p {
+    text-align: justify;
+    line-height: 1.6em !important;
+}
+
+/* CHATBOX */
+.chatbox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* CONTENT IS CLOSE */
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    background: #f9f9f9;
+    height: 515px;
+    width: 400px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* CONTENT ISOPEN */
+.chatbox--active {
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 1;
+
+}
+
+/* BUTTON */
+.chatbox__button {
+    text-align: right;
+    padding-right: 30px;
+}
+
+.send__button {
+    padding: 6px 10px;
+    background: transparent;
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* HEADER */
+.chatbox__header {
+    position: sticky;
+    top: 0;
+    background: darkblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 25px 25px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: var(--primaryBoxShadow);
+    justify-content: space-between;
+}
+
+.chatbox__image--header {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.chatbox__heading--header {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.chatbox__description--header {
+    font-size: .9rem;
+    color: white;
+}
+
+.menuButton {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+#select {
+    padding: 5px;
+    background-color: #ececec;
+    border-radius: 4px;
+    border: none;
+}
+
+/* MESSAGES */
+.chatbox__messages {
+    margin-top: auto;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+    padding: 10px 20px;
+}
+
+.chatbox_contextOptions button {
+    width: 100%;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px 0;
+    background-color: white;
+}
+
+.messages__item {
+    margin: 5px 0;
+    background: #E0E0E0;
+    padding: 8px 12px;
+    max-width: 70%;
+    width: fit-content;
+}
+
+.messages__item--operator {
+    margin-left: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: darkblue;
+    color: white;
+}
+
+.messages__item--visitor {
+    margin-right: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background: darkblue;
+    box-shadow: var(--secondaryBoxShadow);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.chatbox__footer input {
+    width: 80%;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 30px;
+    text-align: left;
+}
+
+.chatbox__send--footer {
+    color: white;
+}
+
+.chatbox__button button,
+.chatbox__button button:focus,
+.chatbox__button button:visited {
+    padding: 10px;
+    background: white;
+    border: none;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* LOADER */
+#loader {
+    position: absolute;
+    left: 52%;
+    bottom: 22%;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    margin: -24px;
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid darkblue;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+  
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Chatbot msg */
+#circular-sb {
+    width: 150px;
+    border: 3.5px solid darkblue;
+    padding: 10px 0px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 900;
+    position: absolute;
+    color: red;
+    right: 10px;
+    bottom: 125px;
+    background-color: white;
+}
+
+.circle1 {
+    position: absolute;
+    padding: 8px;
+    border-radius: 50%;
+    right: 40px;
+    bottom: -22px;
+    background-color: darkblue;
+}
+
+.circle2 {
+    position: absolute;
+    width: 5px;
+    padding: 5px 5px;
+    border-radius: 50%;
+    right: 50px;
+    bottom: -39px;
+    background-color: darkblue;
+}
+
+.c{
+    padding-left: 50px;
+}
